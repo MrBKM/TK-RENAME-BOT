@@ -117,8 +117,8 @@ async def cb_handler(client, query: CallbackQuery):
        try:
            await query.message.delete()
            await query.message.reply_to_message.delete()
-        except:
-            await query.message.delete()
+       except:
+           await query.message.delete()
 
 
 
