@@ -37,7 +37,7 @@ async def start(client, message):
     user = message.from_user
     if not await db.is_user_exist(user.id):
         await db.add_user(user.id)             
-    txt=f"👋 Hello {user.mention},\n\n"
+    txt=f"<b>👋 Hello</b> {user.mention},\n\n<b>I Am File Rename Bot, Please Sent Any Telegram Document Or Video And Enter New Filename To Rename It</b>"
     button=InlineKeyboardMarkup([[
         InlineKeyboardButton('🔗 Support', url='https://t.me/+vGDWK9ihSfc1YjM1'),
         InlineKeyboardButton('📣 Channel', url='https://t.me/+x2rtZoTML9c4ZTI1')
@@ -84,7 +84,7 @@ async def cb_handler(client, query: CallbackQuery):
     data = query.data 
     if data == "start":
         await query.message.edit_text(
-            text=f"""👋 Hello {query.from_user.mention},\n\n""",
+            text=f"""<b>👋 Hello</b> {query.from_user.mention},\n\n<b>I Am File Rename Bot, Please Sent Any Telegram Document Or Video And Enter New Filename To Rename It</b>""",
             reply_markup=InlineKeyboardMarkup( [[
                 InlineKeyboardButton('🔗 Support', url='https://t.me/+vGDWK9ihSfc1YjM1'),
                 InlineKeyboardButton('📣 Channel', url='https://t.me/+x2rtZoTML9c4ZTI1')
