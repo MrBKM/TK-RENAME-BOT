@@ -39,9 +39,6 @@ async def start(client, message):
         await db.add_user(user.id)             
     txt=f"<b>👋 Hello</b> {user.mention},\n\n<b>I Am File Rename Bot, Please Sent Any Telegram Document Or Video And Enter New Filename To Rename It</b>"
     button=InlineKeyboardMarkup([[
-        InlineKeyboardButton('🔗 Support', url='https://t.me/+vGDWK9ihSfc1YjM1'),
-        InlineKeyboardButton('📣 Channel', url='https://t.me/+x2rtZoTML9c4ZTI1')
-        ],[
         InlineKeyboardButton('😎 About', callback_data='about'),
         InlineKeyboardButton('ℹ️ Help', callback_data='help')
         ]])
@@ -86,9 +83,6 @@ async def cb_handler(client, query: CallbackQuery):
         await query.message.edit_text(
             text=f"""<b>👋 Hello</b> {query.from_user.mention},\n\n<b>I Am File Rename Bot, Please Sent Any Telegram Document Or Video And Enter New Filename To Rename It</b>""",
             reply_markup=InlineKeyboardMarkup( [[
-                InlineKeyboardButton('🔗 Support', url='https://t.me/+vGDWK9ihSfc1YjM1'),
-                InlineKeyboardButton('📣 Channel', url='https://t.me/+x2rtZoTML9c4ZTI1')
-                ],[
                 InlineKeyboardButton('😎 About', callback_data='about'),
                 InlineKeyboardButton('ℹ️ Help', callback_data='help')
                 ]]
